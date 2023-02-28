@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:icold/app/widgets/gap.dart';
@@ -25,7 +24,7 @@ class CustomRegistrationTile extends StatelessWidget {
     return InkWell(
       onTap: onTab,
       child: Container(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 15,
           vertical: 5,
         ),
@@ -56,7 +55,7 @@ class CustomRegistrationTile extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            HorizontalGap(
+            const HorizontalGap(
               gap: 50,
             ),
             Icon(

@@ -1,50 +1,52 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'app/constant/app_colors.dart';
 import 'app/routes/app_pages.dart';
 
 void main() {
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
+
   runApp(
     GetMaterialApp(
       title: "Application",
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           color: AppColors.appThemePurpleColor,
         ),
         primaryColor: Colors.white,
         canvasColor: Colors.white,
-        textTheme: const TextTheme(
-          headline1: TextStyle(
-            fontFamily: "Inter",
+        textTheme: TextTheme(
+          displayLarge: GoogleFonts.epilogue(
             color: Colors.black,
             fontSize: 32,
             fontWeight: FontWeight.bold,
           ),
-          headline2: TextStyle(
-            fontFamily: "Inter",
+          displayMedium: GoogleFonts.epilogue(
             color: Colors.black,
             fontSize: 20,
           ),
-          headline3: TextStyle(
-            fontFamily: "Inter",
+          displaySmall: GoogleFonts.epilogue(
             color: Colors.black,
             fontSize: 18,
           ),
-          headline4: TextStyle(
-            fontFamily: "Inter",
+          headlineLarge: GoogleFonts.epilogue(
             color: Colors.black,
             fontSize: 16,
           ),
-          headline5: TextStyle(
-            fontFamily: "Inter",
-            color: Colors.black,
+          headlineMedium: GoogleFonts.epilogue(
+          color: Colors.black,
             fontSize: 15,
           ),
-          headline6: TextStyle(
-            fontFamily: "Inter",
+          headlineSmall: GoogleFonts.epilogue(
             color: Colors.black,
             fontSize: 14,
           ),
