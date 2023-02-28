@@ -15,7 +15,7 @@ class HomeView extends GetView<HomeController> {
       ),
       body: const Center(
         child: Text(
-          'New  Task',
+          'New',
           style: TextStyle(fontSize: 20),
         ),
       ),
