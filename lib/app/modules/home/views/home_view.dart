@@ -11,7 +11,7 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Testing'),
-        // testcase
+        // testcase final
         centerTitle: true,
       ),
       body: const Center(
